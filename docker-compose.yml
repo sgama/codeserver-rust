@@ -1,0 +1,21 @@
+version: '3.5'
+
+services:
+  codeserver-rust:
+    image: solardesigner/codeserver-rust:latest
+    container_name: codeserver-rust
+    command: --allow-http --no-auth
+    environment:
+      - DISABLE_TELEMETRY=true
+    expose:
+      - 8443
+    ports:
+      - 8443:8443  
+    restart: always
+    volumes:
+      - vscode_data:/home/coder/project
+
+volumes:
+  vscode_data:
+    driver: local
+    name: vscode_data
