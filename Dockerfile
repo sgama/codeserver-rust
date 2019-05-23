@@ -1,7 +1,7 @@
 FROM rust:latest
 
-ENV CSVERSION=1.1119-vsc1.33.1 \
-    CODESERVER=https://github.com/codercom/code-server/releases/download/${CSVERSION}/code-server${CSVERSION}-linux-x64.tar.gz \
+ENV CSVERSION=1.1119-vsc1.33.1
+ENV CODESERVER=https://github.com/codercom/code-server/releases/download/${CSVERSION}/code-server${CSVERSION}-linux-x64.tar.gz \
     VSCODE_EXTENSIONS="/root/.local/share/code-server/extensions" \
     LANG=en_US.UTF-8 \
     DISABLE_TELEMETRY=true
