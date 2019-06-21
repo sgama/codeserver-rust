@@ -4,9 +4,7 @@ services:
   codeserver-rust:
     image: solardesigner/codeserver-rust:latest
     container_name: codeserver-rust
-    command: --allow-http --no-auth
-    environment:
-      - DISABLE_TELEMETRY=true
+    command: --allow-http --no-auth --disable-telemetry
     expose:
       - 8443
     ports:
